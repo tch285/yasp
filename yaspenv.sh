@@ -97,7 +97,8 @@ if [ -d ${venvdir} ]; then
 		echo "[i] exec ${tmpfile}" >&2
 		echo "${cmnd}" >> ${tmpfile}
 		chmod +x ${tmpfile}
-		${tmpfile}
+		/bin/bash --init-file ${tmpfile} -i
+		# ${tmpfile}
 	fi
 	#-s < .activate
 fi
