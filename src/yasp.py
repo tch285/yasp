@@ -227,11 +227,11 @@ def get_python_lib_dir():
 
 def get_python_include_dir():
 		"""
-		Get the Python library directory using distutils.
+		Get the Python library directory using sysconfig.
 		"""
 		try:
-				from distutils.sysconfig import get_python_inc
-				return get_python_inc()
+				from sysconfig import get_path
+				return get_path('include')
 		except ImportError:
 				pass
 
