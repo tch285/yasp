@@ -88,6 +88,7 @@ echo_info "selection is ${selection}"
 note "opts are ${opts}"
 
 rootspec=default
+pythiaver=8315
 
 # check what the current version of cmake is
 cmake_version=$(cmake --version | grep version | awk '{print $3}')
@@ -115,7 +116,7 @@ install_package ${selection} HepMC2/default 	True 			 	${opts} --workdir=${this_
 install_package ${selection} LHAPDF6/6.5.4 		True 			 	${opts} --workdir=${this_workdir} --prefix=${this_prefix} --opt version=6.5.5
 install_package ${selection} root/{{rootspec}} 		True 			 	${opts} --workdir=${this_workdir} --prefix=${this_prefix} --opt version=6.36.00
 install_package ${selection} HepMC3/default 	True 			 	${opts} --workdir=${this_workdir} --prefix=${this_prefix} --opt version=3.3.1
-install_package ${selection} pythia8/default		 	True 			 	${opts} --workdir=${this_workdir} --prefix=${this_prefix} --opt version=8315
+install_package ${selection} pythia8/default		 	True 			 	${opts} --workdir=${this_workdir} --prefix=${this_prefix} --opt version={{pythiaver}}
 install_package ${selection} roounfold/default 	True 			${opts} --workdir=${this_workdir} --prefix=${this_prefix} --opt version=3.0.5
 # install_package ${selection} roounfold/default 	True 			${opts} --workdir=${this_workdir} --prefix=${this_prefix} --opt version=2.1
 install_package ${selection} dpmjet/19.3.7 			True 			${opts} --workdir=${this_workdir} --prefix=${this_prefix} --opt version=19.3.7
