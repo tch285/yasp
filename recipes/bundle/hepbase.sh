@@ -114,7 +114,7 @@ install_package ${selection} fjcontrib/mp 	False 		 	${opts} --workdir=${this_wo
 #install_package ${selection} jetflav/default 	False 										
 install_package ${selection} HepMC2/default 	True 			 	${opts} --workdir=${this_workdir} --prefix=${this_prefix} --opt version=2.06.11
 install_package ${selection} LHAPDF6/6.5.4 		True 			 	${opts} --workdir=${this_workdir} --prefix=${this_prefix} --opt version=6.5.5
-install_package ${selection} root/{{rootspec}} 		True 			 	${opts} --workdir=${this_workdir} --prefix=${this_prefix} --opt version=6.36.00
+install_package ${selection} root/{{rootspec}} 		True 			 	${opts} --workdir=${this_workdir} --prefix=${this_prefix} --opt version=6.36.08
 install_package ${selection} HepMC3/default 	True 			 	${opts} --workdir=${this_workdir} --prefix=${this_prefix} --opt version=3.3.1
 install_package ${selection} pythia8/default		 	True 			 	${opts} --workdir=${this_workdir} --prefix=${this_prefix} --opt version={{pythiaver}}
 install_package ${selection} roounfold/default 	True 			${opts} --workdir=${this_workdir} --prefix=${this_prefix} --opt version=3.0.5
