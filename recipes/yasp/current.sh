@@ -33,6 +33,11 @@ echo "[i] venv type is:" $({{yasp.yasp_src_dir}}/yasp.py -q feature venv_type)
 # 	echo "[i] Not running within a virtual environment"
 # 	{{yasp.yasp_src_dir}}/yasp.py -q feature venv_type
 # else
+
+cd {{yasp.yasp_src_dir}}/util/yenv
+# gcc -o ~/bin/myenv myenv.c
+cmake -S . -B build && cmake --build build && cmake --install build --prefix {{prefix}}
+
 if [[ -n "${VIRTUAL_ENV}" ]] || [[ -n "${CONDA_PREFIX}" ]]; then
 	[[ -n "${VIRTUAL_ENV}" ]] &&  echo "[i] Running within a virtual environment at ${VIRTUAL_ENV}"
 	[[ -n "${CONDA_PREFIX}" ]] && echo "[i] Running within a conda environment at ${CONDA_PREFIX}" && VIRTUAL_ENV=${CONDA_PREFIX}
