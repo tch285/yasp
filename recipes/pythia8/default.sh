@@ -48,7 +48,6 @@ else
     echo "The cc file does not exist."
 fi
 ls 
-read -r -p "pausing here: " pause
 
 cd {{srcdir}}
 # obsolete --enable-shared
