@@ -1,12 +1,34 @@
 #!/bin/bash
 
 cd {{workdir}}
-version=8315
+version=8317
 url=https://pythia.org/download/pythia83/pythia{{version}}.tgz
 local_file={{workdir}}/pythia{{version}}.tar.gz
 {{yasp}} --download {{url}} --output {{local_file}}
 tar zxvf {{local_file}}
 srcdir={{workdir}}/pythia{{version}}
+
+
+if [ -f "pythia8317/include/Pythia8/StringFragmentation.h" ]; then
+    echo "The header file exists."
+else
+    echo "The header file does not exist."
+fi
+if [ -f "pythia8317/src/StringFragmentation.cc" ]; then
+    echo "The cc file exists."
+else
+    echo "The cc file does not exist."
+fi
+rm pythia8317/include/Pythia8/StringFragmentation.h
+echo "rm header"
+rm pythia8317/src/StringFragmentation.cc
+echo "rm cc"
+wget pythia8317/include/Pythia8 https://gitlab.com/-/project/12340057/uploads/884a925472c8b4429b296f9be6464818/StringFragmentation.h
+echo "replaced header"
+wget pythia8317/src https://gitlab.com/-/project/12340057/uploads/f4423b132b4fb597874e02ead816329e/StringFragmentation.cc
+echo "replaced cc"
+
+read -r -p "pausing here: " pause
 
 cd {{srcdir}}
 # obsolete --enable-shared
