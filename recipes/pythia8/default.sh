@@ -33,9 +33,9 @@ if [ -f "pythia8317/src/StringFragmentation.cc" ]; then
 else
     echo "The cc file does not exist."
 fi
-wget pythia8317/include/Pythia8 https://gitlab.com/-/project/12340057/uploads/884a925472c8b4429b296f9be6464818/StringFragmentation.h
+wget -P pythia8317/include/Pythia8 https://gitlab.com/-/project/12340057/uploads/884a925472c8b4429b296f9be6464818/StringFragmentation.h
 echo "replaced header"
-wget pythia8317/src https://gitlab.com/-/project/12340057/uploads/f4423b132b4fb597874e02ead816329e/StringFragmentation.cc
+wget -P pythia8317/src https://gitlab.com/-/project/12340057/uploads/f4423b132b4fb597874e02ead816329e/StringFragmentation.cc
 echo "replaced cc"
 if [ -f "pythia8317/include/Pythia8/StringFragmentation.h" ]; then
     echo "The header file exists."
