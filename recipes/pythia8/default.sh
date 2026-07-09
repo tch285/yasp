@@ -1,8 +1,8 @@
 #!/bin/bash
 
 cd {{workdir}}
-version=8315
-url=https://pythia.org/download/pythia83/pythia{{version}}.tgz
+version=8317
+url=https://pythia.org/releases/pythia83/pythia{{version}}.tgz
 local_file={{workdir}}/pythia{{version}}.tar.gz
 {{yasp}} --download {{url}} --output {{local_file}}
 tar zxvf {{local_file}}
