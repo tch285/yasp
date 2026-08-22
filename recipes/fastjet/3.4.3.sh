@@ -3,6 +3,7 @@
 cd {{workdir}}
 version=3.4.3
 url=http://fastjet.fr/repo/fastjet-{{version}}.tar.gz
+url=https://gitlab.com/fastjet/fastjet/-/archive/fastjet-{{version}}/fastjet-fastjet-{{version}}.tar.gz
 local_file={{workdir}}/fastjet-{{version}}.tar.gz
 {{yasp}} --download {{url}} --output {{local_file}}
 tar zxvf {{local_file}}
