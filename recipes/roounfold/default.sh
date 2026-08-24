@@ -29,4 +29,12 @@ cmake {{srcdir}} -DCMAKE_INSTALL_PREFIX={{prefix}} -DCMAKE_BUILD_TYPE=Release
 #make -j {{n_cores}}
 cmake --build . --target install -- -j {{n_cores}}
 
+errc=$?
+if [ $errc -ne 0 ]; then
+    exit $errc
+fi
+
+# install python files
+cp -RL {{build_dir}}/RooUnfold {{prefix}}/lib
+
 exit $?
