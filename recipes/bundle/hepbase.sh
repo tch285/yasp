@@ -106,7 +106,7 @@ else
 fi
 # install_package ${selection} fastjet/3.4.2 		True 			 	${opts} --workdir=${this_workdir} --prefix=${this_prefix} --opt version=3.4.3
 # install_package ${selection} fastjet/master 		True 			 	${opts} --workdir=${this_workdir} --prefix=${this_prefix}
-install_package ${selection} fastjet/3.4.2 		True 			 	${opts} --workdir=${this_workdir} --prefix=${this_prefix} --opt version=3.5.1
+install_package ${selection} fastjet/default 		True 			 	${opts} --workdir=${this_workdir} --prefix=${this_prefix} --opt version=3.5.1
 # install_package ${selection} fjcontrib/1.054 	False 		 	${opts} --workdir=${this_workdir} --prefix=${this_prefix} --opt version=1.054  #make_check=True 
 # install_package ${selection} fjcontrib/1.101 	False 		 	${opts} --workdir=${this_workdir} --prefix=${this_prefix} --opt version=1.101  #make_check=True
 install_package ${selection} fjcontrib/mp 	False 		 	${opts} --workdir=${this_workdir} --prefix=${this_prefix}

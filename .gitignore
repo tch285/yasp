@@ -7,3 +7,4 @@ __pycache__
 .venvstartup.sh
 .env
 /.vscode
+/src/util/yenv/build
