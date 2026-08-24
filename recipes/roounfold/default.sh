@@ -3,7 +3,7 @@
 source ${YASP_DIR}/src/util/bash/util.sh
 
 export RUGITREPO=https://gitlab.cern.ch/RooUnfold/RooUnfold.git
-version=master
+version=3.1.0
 
 #ezrasru=$(get_opt "ezra" $@)
 #if [ ! -z ${ezrasru} ]; then
